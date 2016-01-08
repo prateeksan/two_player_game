@@ -17,7 +17,7 @@ class Game
 
     generator = Generator.new
 
-    puts "First question for #{player_name}...".yellow
+    puts "Question for #{player_name}...".yellow
 
     puts "What is #{generator.number_1} #{generator.operator} #{generator.number_2}?"
 
@@ -32,11 +32,11 @@ class Game
       player.lives -= 1
     end
     
-    puts "Your score is now #{player.score}"
-    puts "You have #{player.lives} left"
+    puts "#{player_name} score is now #{player.score}"
+    puts "#{player_name} have #{player.lives} left"
 
     if player.lives == 0
-      puts "#{player_name} loses :("
+      puts "#{player_name} loses :(".red
       return "break"
     end
 
